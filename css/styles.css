@@ -1,4 +1,10 @@
-/* Reset */
+/* -- Colors --
+
+Blue: #008ac4
+
+*/
+
+/* Presets */
 
 .container-fluid {
     padding: 0;
@@ -6,6 +12,28 @@
 
 .container {
     max-width: 85%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+    .flex-container .column-fluid {
+        flex: 3;
+    }
+
+    .flex-container .column {
+        flex: 1;
+        padding: 24px;
+        flex-basis: 280px;
+        text-align: center;
+    }
+
+.container-black {
+    background-color: black;
 }
 
 /* NavBar */
@@ -27,16 +55,25 @@
 }
 
 .nav-link {
-    font-size: 1.4em;
-    font-family: 'Pragati Narrow';
+    font-size: 1.6em;
+    font-family: 'Assistant';
     color: rgb(255, 255, 255, 1)!important;
 
     margin: 0 12px 0 12px;
 }
 
+.nav-link:hover {
+    color: #008ac4!important;
+    
+}
+
+.nav-container {
+    background: #222;
+}
+
 /* Content */
 
-#landing-container {
+.landing-container {
     background-image: url('../static/images/index-background.jpg');
     background-position: center;
     background-size: cover;
@@ -95,17 +132,17 @@
     @media only screen and (max-width: 1000px){
 
         .landing-blue-line {
-            bottom: 36vh;
+            bottom: 38vh;
             z-index: 3;
             margin-bottom: 0;
         }
 
         .landing-blue-line.line-left {
-            width: 24%;
+            width: 18%;
         }
 
         .landing-blue-line.line-right {
-            width: 24%;
+            width: 18%;
         }
 
     }
@@ -129,23 +166,176 @@
     #landing-logo-subtext {
         position: absolute;
         font-size: 1.4em;
-        font-family: "Pragati Narrow";
-        font-weight: bold;
+        font-family: "Assistant";
         color: #fff;
         left: 0px;
         width: 100%;
         bottom: -1.4em;
         padding-left: 16px;
-
     }
     
     @media only screen and (max-width: 1000px){
         #landing-logo-container {
-            width: 52%;
+            width: 64%;
             z-index: 3;
-            bottom: 36vh;
-            left: 24%;
-            
+            bottom: 38vh;
+            left: 18%;
+        }
+
+        #landing-logo-subtext {
+            font-size: 1em;
+            bottom: -1.8em;
         }
         
     }
+
+#landing-ebook-container {
+    position: absolute;
+    z-index: 5;
+    
+    width: 380px;
+    padding: 12px 12px 12px 0;
+    background-color: #008ac4;
+
+    bottom: 25vh;
+    right: 25vh;
+}
+
+    #landing-ebook-container > .ebook-image {
+        position: absolute;
+        top: -48px;
+        width: 121px;
+        height: 196px;
+        background-image: url('../static/images/ebook-cover.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    #landing-ebook-container > .ebook-text {
+        display: flex;
+        margin-left: 132px;
+        text-align: center;
+        font-family: 'Assistant';
+        font-size: 1.2em;
+        color: white;
+    }
+
+    @media only screen and (max-width: 1000px){
+        #landing-ebook-container {
+            position: absolute;
+            left: 10%;
+            bottom: 16vh;
+            width: 80%;
+        }
+
+        #landing-ebook-container > .ebook-image {
+            width: 82px;
+            top: -30px;
+        }
+
+        #landing-ebook-container > .ebook-text {
+            margin-left: 88px;
+            font-size: 1em;
+        }
+    }
+
+#landing-bottom-slant {
+    position: absolute;
+    background: linear-gradient(to right top, white 49.5%, transparent 50%);
+    width: 100%; 
+    height: 8vh;
+    bottom: 4vh;
+    z-index: 4;
+}
+
+.landing-sub-title {
+    font-family: 'Assistant';
+    font-size: 2em;
+    text-align: center;
+    vertical-align: middle;
+    height: 80px;
+}
+
+.landing-column-brick {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position-y: center;
+    width: 100%;
+}
+
+    .brick-1 {
+        background-image: url('../static/images/brick_mission.jpg');
+        background-position-y: center;
+}
+
+    .brick-2 {
+        background-image: url('../static/images/brick_nutrition.jpg');
+}
+
+    .brick-3 {
+        background-image: url('../static/images/brick_guarantee.jpg');
+        background-position-y: -24px;
+}
+
+    .landing-column-brick:after {
+        content: "";
+        display: block;
+        padding-bottom: 60%; /* this padding sets the height of the brick */
+    }
+
+.brick-title {
+    background-color: #008ac4;
+    padding: 0 12px 0 12px;
+
+    font-size: 1.6em;
+    font-family: 'Assistant';
+    color: rgb(255, 255, 255, 1)!important;
+    color: #fff;
+}
+
+.brick-content {
+    margin-top: 24px;
+    font-family: "Assistant";
+    font-size: 1.4em;
+}
+
+/* Coaching Page */
+
+.coaching-jumbo {
+    display: flex;
+    height: 360px;
+}
+
+.coaching-jumbo > .box-1 {
+    flex: 1;
+    background-image: url("../static/images/brick_mission.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+
+}
+
+.coaching-jumbo > .box-2 {
+    display: flex;
+    align-items: center;
+    flex: 2;
+    width: 100%;
+    height: 100%;
+    padding-left: 120px;
+}
+
+.coaching-jumbo .brick-subtext {
+    padding-top: 12px;
+    display: block;
+    color: white;
+}
+
+.coaching-jumbo .brick-subtext p {
+    font-family: "Courier";
+    font-size: 1.4em;
+    color: white;
+}
