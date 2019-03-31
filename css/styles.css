@@ -1,17 +1,29 @@
 /* -- Colors --
 
-Blue: #008ac4
+Primary Dark (Black): #000000
+Secondary Dark: #222222
+Blue #008ac4
+
 
 */
 
 /* Presets */
+
+.brick-title {
+    background-color: #008ac4;
+    padding: 0 12px 0 12px;
+    font-size: 1.6em;
+    font-family: 'Assistant';
+    color: rgb(255, 255, 255, 1)!important;
+}
 
 .container-fluid {
     padding: 0;
 }
 
 .container {
-    max-width: 85%;
+    max-width: 80%;
+    padding: 0;
 }
 
 .flex-container {
@@ -21,19 +33,18 @@ Blue: #008ac4
     justify-content: space-around;
 }
 
-    .flex-container .column-fluid {
-        flex: 3;
+@media only screen and (max-width: 1000px) {
+    .flex-container {
+        flex-direction: column;
     }
-
-    .flex-container .column {
-        flex: 1;
-        padding: 24px;
-        flex-basis: 280px;
-        text-align: center;
-    }
+}
 
 .container-black {
     background-color: black;
+}
+
+ul li {
+    list-style-type: square;
 }
 
 /* NavBar */
@@ -55,7 +66,7 @@ Blue: #008ac4
 }
 
 .nav-link {
-    font-size: 1.6em;
+    font-size: 1.2em;
     font-family: 'Assistant';
     color: rgb(255, 255, 255, 1)!important;
 
@@ -71,15 +82,77 @@ Blue: #008ac4
     background: #222;
 }
 
+/* Footer */
+
+.container-footer {
+    background-color: #222;
+    color: #888;
+    font-family: 'Assistant';
+    font-size: 1em;
+}
+
+.container-footer ul li {
+    list-style-type: none; 
+}
+
+.container-footer a {
+    color: #888;
+}
+
+.container-footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.container-footer > .container {
+    display: flex;
+    flex-direction: row;
+    min-height: 160px;
+}
+
+.container-footer > .container > .column {
+    flex: 1;
+    margin: 24px;
+    justify-content: space-between;
+}
+
+.container-footer > .container > .column span {
+    margin-right: 24px;
+}
+
+.container-footer > .container > .column:nth-of-type(1) {
+    background-image: url(../static/images/logo-header.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.container-footer > .container > .column:nth-of-type(4) {
+    /* align-self: flex-end; */
+}
+
+.gray-box {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background-color: #222;
+    margin: 0;
+}
+
+    .gray-box-ig {
+        background-image: url('../static/images/glyphs/ig.gif');
+    }
+
 /* Content */
+
+/* Landing */
 
 .landing-container {
     background-image: url('../static/images/index-background.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
     height: 96vh;
+    margin-bottom: 36px;
 }
 
 #landing-portrait {
@@ -256,86 +329,295 @@ Blue: #008ac4
     height: 80px;
 }
 
-.landing-column-brick {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.landing-column {
+    margin: 12px;
+    flex: 1;
+    justify-content: space-around;
+    background-repeat: no-repeat;
+}
+
+.landing-column-image {
+    min-height: 240px;
     background-size: cover;
-    background-position-y: center;
-    width: 100%;
+    border-top: 6px solid #008ac4;
+    
+    /* position title in middle of jumbo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-    .brick-1 {
-        background-image: url('../static/images/brick_mission.jpg');
-        background-position-y: center;
+.landing-column:nth-of-type(1) > .landing-column-image {
+    background-image: url('../static/images/jumbo_mission.jpg');
 }
 
-    .brick-2 {
-        background-image: url('../static/images/brick_nutrition.jpg');
+.landing-column:nth-of-type(2) > .landing-column-image {
+    background-image: url('../static/images/jumbo_nutrition.jpg');
 }
 
-    .brick-3 {
-        background-image: url('../static/images/brick_guarantee.jpg');
-        background-position-y: -24px;
+.landing-column:nth-of-type(3) > .landing-column-image {
+    background-image: url('../static/images/jumbo_guarantee.jpg');
 }
 
-    .landing-column-brick:after {
-        content: "";
-        display: block;
-        padding-bottom: 60%; /* this padding sets the height of the brick */
-    }
-
-.brick-title {
-    background-color: #008ac4;
-    padding: 0 12px 0 12px;
-
-    font-size: 1.6em;
-    font-family: 'Assistant';
-    color: rgb(255, 255, 255, 1)!important;
+.landing-column-text {
+    padding: 16px;
     color: #fff;
-}
-
-.brick-content {
-    margin-top: 24px;
-    font-family: "Assistant";
-    font-size: 1.4em;
+    font-family: 'Roboto Slab';
+    font-size: 1.2em;
+    background-color: #008ac4;
+    text-align: center;
 }
 
 /* Coaching Page */
 
-.coaching-jumbo {
+.jumbo-container {
     display: flex;
-    height: 360px;
+    height: 320px;
 }
 
-.coaching-jumbo > .box-1 {
+@media only screen and (max-width: 1000px){
+    .jumbo-container {
+        height: 320px;
+    }
+}
+
+.jumbo-image {
     flex: 1;
-    background-image: url("../static/images/brick_mission.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-
+    min-height: 240px;
 }
 
-.coaching-jumbo > .box-2 {
+    .jumbo-mission {
+        background-image: url("../static/images/jumbo_mission.jpg");
+        padding-left: 120px;
+    }
+
+    .jumbo-about {
+        background-image: url("../static/images/jumbo_about.jpg");
+        padding-right: 120px;
+    }
+
+    .jumbo-guarantee {
+        background-image: url("../static/images/jumbo_guarantee.jpg");
+        padding-left: 120px;
+    }
+
+@media only screen and (max-width: 1000px){
+    .jumbo-image {
+        /* Combine into a single box for mobile */
+        flex: 2;
+        display: none;
+    }
+}
+
+.jumbo-text-container {
     display: flex;
     align-items: center;
     flex: 2;
     width: 100%;
     height: 100%;
-    padding-left: 120px;
+
+    /* hide background of text container unless on mobile*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -50000px;
 }
 
-.coaching-jumbo .brick-subtext {
+@media only screen and (max-width: 1000px){
+    .jumbo-text-container {
+        padding: 40px 0 0 0;
+        text-align: center;
+        /* show background image if on mobile */
+        background-position: 0 -100px;
+    }
+
+}
+
+.jumbo-text {
     padding-top: 12px;
     display: block;
     color: white;
 }
 
-.coaching-jumbo .brick-subtext p {
-    font-family: "Courier";
-    font-size: 1.4em;
+.jumbo-text p {
+    font-family: "Roboto Slab";
+    font-size: 1.2em;
     color: white;
+}
+
+/* Coaching Approach */
+
+.coaching-approach {
+    background-color: #008ac4;
+    padding: 0;
+}
+
+.coaching-approach-column {
+    flex: 1;
+    padding: 26px 16px 26px 16px;
+    border-top: 6px solid #008ac4;
+    background-color: #fff;
+    text-align: center;
+
+    /*subtext font text */
+    font-family: 'Roboto Slab';
+    color: #888;
+}
+
+.coaching-approach-column h2 {
+    font-size: 1.6em;
+    font-family: 'Assistant';
+    color: #008ac4;
+}
+
+.coaching-approach-column:nth-of-type(1) {
+    background-color: #008ac4;
+    color: #fff;
+    text-align: center;
+    align-self: center;
+    height: 100%;
+}
+
+.coaching-approach-column > .brick-title {
+    line-height: 1em; 
+}
+
+/* Text "My 3 step approach */
+.coaching-approach-column > .brick-title > p:nth-of-type(2) {
+    font-size: 4em;
+    line-height: 1em; 
+    font-weight: bold;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    position: relative;
+    top: -0.1em;
+}
+
+.coaching-approach-column > img {
+    width: 40%;
+    max-width: 200px;
+    margin-bottom: 12px;
+} 
+
+@media only screen and (max-width: 1000px) {
+    .coaching-approach-column > img {
+        width: 25%;
+        float: left;
+        margin-right: 16px;
+    }
+}
+
+
+/* Coaching Skype */
+
+.coaching-skype {
+    margin: 20px auto;
+    max-width: 800px;
+    min-height: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+.coaching-skype-column {
+    padding: 16px;
+}
+
+.coaching-skype-column:nth-of-type(1) { /* left portion */
+    text-align: center;
+    flex: 2;
+}
+
+.coaching-skype-column:nth-of-type(2) { /* right portion */
+    flex: 3;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px){
+    .coaching-skype-column:nth-of-type(2) {
+        text-align: center;
+        max-width: 420px;
+    }
+}
+
+.coaching-skype-column > img {
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px){
+    .coaching-skype-column > img {
+        width: 50%;
+    }
+}
+
+.coaching-skype-column > p {
+    font-size: 1.6em;
+    font-family: 'Assistant';
+    color: #008ac4;
+}
+
+/* Coaching Programs */
+
+.coaching-programs { /* container */
+    background-color: #008ac4;
+    padding: 0;
+}
+
+.coaching-programs-column {
+    border-top: 6px solid #008ac4;
+    padding: 26px 12px 26px 12px;
+    flex: 2;
+    color: #fff;
+    font-family: "Roboto Slab";
+}
+
+.coaching-programs-column ul {
+    margin-top: 12px;
+    list-style-type: square;
+}
+
+.coaching-programs-column ul li {
+    margin-bottom: 6px;
+}
+
+/* Text: "2 programs to choose from" */
+.coaching-programs-column > .brick-title > p:nth-of-type(1) {
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1em; 
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.coaching-programs-column:nth-of-type(1) {
+    align-self: center;
+    flex: 1;
+    text-align: center;
+}
+
+/* Nutrition-Only Coaching */
+.coaching-programs-column:nth-of-type(2) {
+    background-image: url('../static/images/nutrition-coaching-bg.jpg');
+    background-size: cover;
+    border-right: 1px solid #aaa;
+}
+
+@media only screen and (max-width: 1000px){
+    .coaching-programs-column:nth-of-type(2) {
+        border-right: none;
+    }
+}
+
+/* Nutrition + Fitness Coaching */
+.coaching-programs-column:nth-of-type(3) {
+    background-image: url('../static/images/fitness-coaching-bg.jpg');
+    background-size: cover;
+}
+
+/* About Me */
+.about-contents {
+    margin-top: 80px;
 }

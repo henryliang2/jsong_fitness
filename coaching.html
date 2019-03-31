@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Assistant:700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:700" rel="stylesheet">
 
     <title>JSONG Fitness - James Song Vancouver Personal Training, Trainer, Coaching, Strength, Nutrition, Diet</title>
 </head>
@@ -30,32 +32,130 @@
 
     <!-- Jumbotron -->
     <div class="container-fluid container-black">
-        <div class="container">
-            <div class="coaching-jumbo">
-                <div class="box-1"></div>
-                <div class="box-2">
-                    <div class="box-2-inner">
-                        <span class="brick-title">MY MISSION</span>
-                        <div class="brick-subtext">
-                            <p>To empower and inspire individuals to reach their fitness goals 
-                                through proper nutrition and training. </p>
-                                
-                            <p>To help transform individuals both physically and mentally to 
-                                reach their ultimate potential.</p>
-                        </div>
+        <div class="container jumbo-container">
+            <div class="jumbo-image jumbo-mission"></div>
+            <div class="jumbo-text-container jumbo-mission">
+                <div>
+                    <span class="brick-title">MY MISSION</span>
+                    <div class="jumbo-text">
+                        <p>To empower and inspire individuals to reach their fitness goals
+                            through proper nutrition and training. </p>
+        
+                        <p>To help transform individuals both physically and mentally to
+                            reach their ultimate potential.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap Dependencies -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Approach to coaching -->
+    <div class="container flex-container coaching-approach">
+        <div class="coaching-approach-column">
+            <div class="brick-title">
+                <p>MY</p>
+                <p>3</p>
+                <p>STEP APPROACH</p>
+            </div>
+        </div>
+        <div class="coaching-approach-column">
+            <img src="static/images/approach-discover.png" />
+            <h2>1. Discover</h2>
+            <p>I analyze your current workout and nutrition program, 
+                obtaining a detailed history and learning about your
+                personal goals.</p>
+        </div>
+        <div class="coaching-approach-column">
+            <img src="static/images/approach-plan.png" />
+            <h2>2. Plan</h2>
+            <p>I work with you to design a tailored nutrition protocol that
+                works for you and a training routine based on your goals.</p>
+        </div>
+        <div class="coaching-approach-column">
+            <img src="static/images/approach-test.png" />
+            <h2>3. Attack</h2>
+            <p>We test the program together - gauging your body's response,
+                consistently re-evaluating, and making adjustments as necessary.</p>
+        </div>
+    </div>
     
+    <!-- Skype -->
+    <div class="flex-container coaching-skype">
+        <div class="coaching-skype-column">
+            <img src="static/images/laptop-screen.jpg" />
+        </div>
+        <div class="coaching-skype-column">
+            <p>GET PROFESSIONAL ONE-ON-ONE COACHING AT YOUR FINGERTIPS</p>
+        </div>
+    </div>
+
+    <!-- Nutrition First Approach -->
+    <div class="container" style="text-align: center; font-family: 'Roboto Slab'; color: #888888; margin-bottom: 80px;">
+        <div>
+            <span class="brick-title">NUTRITION FIRST</span>
+        </div>
+        <div>
+            <p>If there is one thing I know - from years of studying dietetics and 
+            practicing as a dietitian, working with top fitness coaches like
+            Amer Kamra, and applying that knowledge to get lean for my
+            bodybuilding competitions - it's that nutrition is key to success. 
+            No matter the intensity or complexity of your fitness workouts, your
+            performance is either sustained or limited by your nutrition.</p>
+
+            <p>That's why I offer a nutrition-only coaching option for those
+                who already have their workout regimen dialed. Tailored nutrition
+                coaching that is customized to your body's needs will take your 
+                performance to the next level.
+            </p>
+        </div>
+    </div>
+    
+
+    <!-- Program Offerings -->
+    <div class="container flex-container coaching-programs">
+        <div class="coaching-programs-column">
+            <div class="brick-title">
+                <p>2</p>
+                <p>PROGRAMS TO CHOOSE FROM</p>
+            </div>
+        </div>
+        <div class="coaching-programs-column">
+            <div class="brick-title">NUTRITION-ONLY COACHING</div>
+            <ul>
+                <li>8 or 16-week program with one-on-one coaching</li>
+                <li>Evidence-based guidance from a clinical dietitian</li>
+                <li>Design a new flexible dieting nutrition program</li>
+                <li>24/7 support via text and email</li>
+            </ul>
+        </div>
+        <div class="coaching-programs-column">
+            <div class="brick-title">FITNESS + NUTRITION COACHING</div>
+            <ul>
+                <li>8 or 16-week program with one-on-one coaching</li>
+                <li>Evidence-based guidance from a clinical dietitian</li>
+                <li>Evaluation of your current workout/nutrition plan</li>
+                <li>Design a new flexible dieting nutrition program</li>
+                <li>Get a bespoke workout program for your fitness goals</li>
+                <li>24/7 support via text and email</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-partial"></div>
+
+    <!-- Bootstrap Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
     <!-- Load Partials-->
     <script>
-        $( "#navbar-partial" ).load( "navbar.html" );
+        $("#navbar-partial").load("navbar-partial.html");
+        $("#footer-partial").load("footer-partial.html");
     </script>
-    </body>
+</body>
 </html>

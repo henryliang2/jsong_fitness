@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Assistant:700" rel="stylesheet">
+
+    <title>JSONG Fitness - James Song Vancouver Personal Training, Trainer, Coaching, Strength, Nutrition, Diet</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="container-fluid nav-container">
+        <!-- Restrict Width -->
+        <div class="container">
+            <!-- Navbar Inner -->
+            <div id="navbar-partial"></div>
+        </div>
+    </div>
+    
+    <!-- Jumbotron -->
+    <div class="container-fluid container-black">
+        <div class="container jumbo-container">
+            <div class="jumbo-text-container jumbo-about">
+                <div>
+                    <span class="brick-title">ABOUT ME</span>
+                    <div class="jumbo-text">
+                        <p>As a Registered Dietitian with credentials obtained
+                            from the University of British Columbia, I value the
+                            importance of continuous learning to enhance my
+                            knowledge and the application of that knowledge to
+                            help my clients achieve success.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="jumbo-image jumbo-about"></div>
+        </div>
+    </div>
+
+    <div class="container about-contents">
+        <p>
+        One of the most important things life has taught me is the
+        significance of maintaining an active and healthy lifestyle.
+        It's not easy, especially with so much rampant misinformation
+        about nutrition and many "influencers" with little to no
+        qualifications throwing around terrible advice.
+        </p>
+    </div>
+
+    <!-- Fake Space-->
+    <div class="fake-space" style="height: 400px;"></div>
+
+    <div class="container-fluid container-black">
+        <div class="container jumbo-container">
+            <div class="jumbo-image jumbo-guarantee"></div>
+            <div class="jumbo-text-container jumbo-guarantee">
+                <div>
+                    <span class="brick-title">MY GUARANTEE</span>
+                    <div class="jumbo-text">
+                        <p>My online coaching and workout programs are 
+                            proven to get you results provided you put 
+                            in the hard work.</p>
+                        
+                        <p>Consult me only if you’re serious and committed to 
+                        reaching your fitness and physique goals. I will 
+                        provide the blueprint for you to be successful.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Footer -->
+    <div id="footer-partial"></div>
+    
+    <!-- Bootstrap Dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    
+    <!-- Load Partials-->
+    <script>
+        $("#navbar-partial").load("navbar-partial.html");
+        $("#footer-partial").load("footer-partial.html");
+    </script>
+</body>
+</html>
