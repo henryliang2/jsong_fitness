@@ -36,6 +36,10 @@ Blue #008ac4
     padding: 0;
 }
 
+.black-bg {
+    background-color: black;
+}
+
 .container {
     max-width: 80%;
     padding: 0;
@@ -52,10 +56,6 @@ Blue #008ac4
     .flex-container {
         flex-direction: column;
     }
-}
-
-.container-black {
-    background-color: black;
 }
 
 ul li {
@@ -412,25 +412,21 @@ ul li {
     min-height: 240px;
 }
 
-    .jumbo-mission {
+    .jumbo-mission-bg {
         background-image: url("../static/images/jumbo_mission.jpg");
-        padding-left: 120px;
     }
 
-    .jumbo-about {
+    .jumbo-about-bg {
         background-image: url("../static/images/jumbo_about.jpg");
-        padding-right: 120px;
     }
 
-    .jumbo-guarantee {
+    .jumbo-guarantee-bg {
         background-image: url("../static/images/jumbo_guarantee.jpg");
-        padding-left: 120px;
     }
 
 @media only screen and (max-width: 1000px){
     .jumbo-image {
         /* Combine into a single box for mobile */
-        flex: 2;
         display: none;
     }
 }
@@ -441,20 +437,6 @@ ul li {
     flex: 2;
     width: 100%;
     height: 100%;
-
-    /* hide background of text container unless on mobile*/
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -50000px;
-}
-
-@media only screen and (max-width: 1000px){
-    .jumbo-text-container {
-        padding: 40px 0 0 0;
-        text-align: center;
-        /* show background image if on mobile */
-        background-position: 0 -100px;
-    }
 
 }
 
@@ -467,6 +449,23 @@ ul li {
     font-family: "Roboto Slab";
     font-size: 1.2em;
     color: white;
+}
+
+.show-bg-if-mobile {
+    /* hide background of container unless on mobile*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -50000px;
+}
+
+@media only screen and (max-width: 1000px){
+    .show-bg-if-mobile {
+        padding: 40px 0 0 0;
+        text-align: center;
+        /* show background image if on mobile */
+        background-position: 0 0;
+    }
+
 }
 
 /* Coaching Approach */
@@ -526,9 +525,11 @@ ul li {
 
 @media only screen and (max-width: 1000px) {
     .coaching-approach-column > img {
-        width: 25%;
+        width: 30%;
         float: left;
-        margin-right: 16px;
+        margin-right: 20px;
+        padding-top: 30px;
+        padding-bottom: 40px;
     }
 }
 
@@ -582,6 +583,12 @@ ul li {
     font-family: 'Roboto Slab'; 
     color: #888888; 
     margin: 0 auto 80px auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    .coaching-nutrition {
+        text-align: center;
+    }
 }
 
 /* Coaching Programs */
