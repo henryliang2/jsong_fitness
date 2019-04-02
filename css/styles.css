@@ -538,7 +538,7 @@ ul li {
 
 .coaching-skype {
     margin: 0 auto;
-    min-height: 60vh;
+    min-height: 80vh;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -565,6 +565,9 @@ ul li {
 
     .coaching-skype {
         flex-direction: column-reverse;
+        min-height: 0;
+        margin-top: 160px;
+        margin-bottom: 160px;
     }
     
     .coaching-skype-column > img {
@@ -572,44 +575,12 @@ ul li {
     }
 }
 
-/* Nutrition First */
-
-.coaching-nutrition {
-    margin-bottom: 120px;
-}
-
-.coaching-nutrition-column {
-    min-height: 60vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 1em;
-    font-family: 'Roboto Slab';
-    color: #888;
-}
-
-.coaching-nutrition-column:nth-of-type(1) {
-    flex: 2;
-    background-image: url('../static/images/jumbo_nutrition.jpg');
-    background-size: cover;
-}
-
-.coaching-nutrition-column:nth-of-type(2) {
-    padding: 0 80px;
-    flex: 3;
-}
-
-@media only screen and (max-width: 1000px) {
-    .coaching-nutrition {
-        text-align: center;
-        flex-direction: column-reverse;
-    }
-}
 
 /* Coaching Programs */
 
 .coaching-programs { /* container */
     padding: 0;
+    min-height: 80vh;
 }
 
 .coaching-programs-column {
@@ -639,16 +610,50 @@ ul li {
 }
 
 /* Nutrition-Only Coaching */
-.coaching-programs-column:nth-of-type(1) {
-    /* background-image: url('../static/images/nutrition-coaching-bg.jpg');
-    */
+
+
+.coaching-programs-column:nth-of-type(2) {
+    background-image: url('../static/images/nutrition-coaching-bg.jpg');
 }
 
-@media only screen and (max-width: 1000px){
-    .coaching-programs-column:nth-of-type(2) {
-        border-right: none;
+.coaching-programs-column:nth-of-type(3) {
+    background-image: url('../static/images/fitness-coaching-bg.jpg');
+}
+
+/* Nutrition First */
+
+.coaching-nutrition {
+    margin: 120px 0;
+}
+
+.coaching-nutrition-column {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1em;
+    font-family: 'Roboto Slab';
+    color: #888;
+}
+
+.coaching-nutrition-column:nth-of-type(1) {
+    flex: 2;
+    background-image: url('../static/images/jumbo_nutrition.jpg');
+    background-size: cover;
+}
+
+.coaching-nutrition-column:nth-of-type(2) {
+    padding: 0 80px;
+    flex: 3;
+}
+
+@media only screen and (max-width: 1000px) {
+    .coaching-nutrition {
+        text-align: center;
+        flex-direction: column-reverse;
     }
 }
+
 
 /* About Me */
 .about-contents {
@@ -657,9 +662,40 @@ ul li {
 
 /* Contact */
 
-/* Contact Jumbo */
-.jumbo-contact {
-    text-align: center;
-    padding: 80px;
-    background-color: black;
+.contact-bg {
+    flex: 1;
+    min-height: 120vh;
+    background-image: url('../static/images/contact-bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.contact-form {
+    flex: 2;
+    margin-top: 120px;
+    margin-right: 10vh;
+}
+
+form {
+    width: 66%;
+}
+
+label {
+    font-size: 1em;
+    font-family: 'Assistant';
+    color: white;
+}
+
+input {
+    margin-bottom: 18px;
+    height: 36px;
+}
+
+.width-50pct {
+    width: 48%;
+    margin-right: 1%
+}
+
+.width-100pct {
+    width: 98%;
 }
