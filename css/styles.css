@@ -537,73 +537,88 @@ ul li {
 /* Coaching Skype */
 
 .coaching-skype {
-    margin: 60px auto 0 auto;
-    min-height: 300px;
-    align-items: flex-start;
+    margin: 0 auto;
+    min-height: 60vh;
+    align-items: center;
     justify-content: center;
+    display: flex;
 }
 
 .coaching-skype-column {
     padding: 16px;
-}
-
-.coaching-skype-column:nth-of-type(1) { /* left portion */
     text-align: center;
-    flex: 2;
-}
-
-.coaching-skype-column:nth-of-type(2) { /* right portion */
-    flex: 3;
-    text-align: center;
+    flex: 1;
 }
 
 .coaching-skype-column > img {
-    width: 60%;
+    width: 75%;
     margin-bottom: 24px;
 }
 
-@media only screen and (max-width: 1000px){
-    .coaching-skype-column:nth-of-type(1) {
-        max-width: 500px;
-    }
-    
-    .coaching-skype-column > img {
-        width: 50%;
-    }
-}
-
 .coaching-skype-column > p {
-    font-size: 1.6em;
+    font-size: 2em;
     font-family: 'Assistant';
     color: #008ac4;
 }
 
+@media only screen and (max-width: 1000px){
+
+    .coaching-skype {
+        flex-direction: column-reverse;
+    }
+    
+    .coaching-skype-column > img {
+        width: 60%;
+    }
+}
+
+/* Nutrition First */
+
 .coaching-nutrition {
-    text-align: left;
-    font-family: 'Roboto Slab'; 
-    color: #888888; 
-    margin: 0 auto 80px auto;
+    margin-bottom: 120px;
+}
+
+.coaching-nutrition-column {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1em;
+    font-family: 'Roboto Slab';
+    color: #888;
+}
+
+.coaching-nutrition-column:nth-of-type(1) {
+    flex: 2;
+    background-image: url('../static/images/jumbo_nutrition.jpg');
+    background-size: cover;
+}
+
+.coaching-nutrition-column:nth-of-type(2) {
+    padding: 0 80px;
+    flex: 3;
 }
 
 @media only screen and (max-width: 1000px) {
     .coaching-nutrition {
         text-align: center;
+        flex-direction: column-reverse;
     }
 }
 
 /* Coaching Programs */
 
 .coaching-programs { /* container */
-    background-color: #008ac4;
     padding: 0;
 }
 
 .coaching-programs-column {
-    border-top: 6px solid #008ac4;
     padding: 26px 12px 26px 12px;
+    margin: 80px;
     flex: 2;
-    color: #fff;
+    color: white;
     font-family: "Roboto Slab";
+    background-size: cover;
 }
 
 .coaching-programs-column ul {
@@ -623,29 +638,16 @@ ul li {
     padding-bottom: 0;
 }
 
-.coaching-programs-column:nth-of-type(1) {
-    align-self: center;
-    flex: 1;
-    text-align: center;
-}
-
 /* Nutrition-Only Coaching */
-.coaching-programs-column:nth-of-type(2) {
-    background-image: url('../static/images/nutrition-coaching-bg.jpg');
-    background-size: cover;
-    border-right: 1px solid #aaa;
+.coaching-programs-column:nth-of-type(1) {
+    /* background-image: url('../static/images/nutrition-coaching-bg.jpg');
+    */
 }
 
 @media only screen and (max-width: 1000px){
     .coaching-programs-column:nth-of-type(2) {
         border-right: none;
     }
-}
-
-/* Nutrition + Fitness Coaching */
-.coaching-programs-column:nth-of-type(3) {
-    background-image: url('../static/images/fitness-coaching-bg.jpg');
-    background-size: cover;
 }
 
 /* About Me */
