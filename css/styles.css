@@ -12,7 +12,7 @@ Blue #008ac4
 .brick-title {
     background-color: #008ac4;
     padding: 0 12px 0 12px;
-    font-size: 1.6em;
+    font-size: 1.8em;
     font-family: 'Assistant';
     color: #fff;
     margin-bottom: 6px;
@@ -673,10 +673,11 @@ ul li {
 .contact-form {
     flex: 2;
     margin-top: 120px;
-    margin-right: 10vh;
+    margin-right: 12vw;
 }
 
 form {
+    margin-top: 60px;
     width: 66%;
 }
 
@@ -698,4 +699,36 @@ input {
 
 .width-100pct {
     width: 98%;
+}
+
+.height-160px {
+    height: 160px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container-contact {
+        background-image: url('../static/images/contact-bg.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    
+    .contact-bg {
+        display: none;
+    }
+
+    .contact-form-header {
+        text-align: center;
+    }
+
+    .contact-form {
+        margin: 60px 6vh 0 6vh;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .contact-form-header {
+        text-align: center;
+    }
 }
