@@ -4,10 +4,16 @@ Primary Dark (Black): #000000
 Secondary Dark: #222222
 Blue #008ac4
 
+Adobe Fonts
 
 */
 
 /* Presets */
+
+a, a:visited {
+    text-decoration: none;
+    outline: none;
+}
 
 .brick-title {
     background-color: #008ac4;
@@ -15,7 +21,22 @@ Blue #008ac4
     font-size: 1.8em;
     font-family: 'Assistant';
     color: #fff;
-    margin-bottom: 6px;
+}
+
+.massive-title {
+    font-size: 6em;
+    font-family: "bebas-neue";
+    font-weight: "400";
+    color: white;
+    line-height: 1.2em;
+}
+
+.massive-title-light{
+    font-size: 6em;
+    font-family: "bebas-neue";
+    font-weight: "400";
+    color: #222;
+    line-height: 1.2em;
 }
 
 .white-button {
@@ -23,13 +44,21 @@ Blue #008ac4
     width: 160px;
     height:36px;
     line-height: 36px;
-    background-color: white;
+    background-color: #fff;
     padding: 0 12px 0 12px;
     text-align: center;
     vertical-align: middle;
     color: #008ac4;
-    font-family: 'Roboto Slab';
+    font-family: 'Assistant';
     font-size: 0.8em;
+}
+
+.white-button {
+    border: none;
+}
+
+.white-button:hover {
+    background-color: #ddd;
 }
 
 .container-fluid {
@@ -82,7 +111,7 @@ ul li {
 
 .nav-link {
     font-size: 1.2em;
-    font-family: 'Assistant';
+    font-family: "Assistant";
     color: rgb(255, 255, 255, 1)!important;
 
     margin: 0 12px 0 12px;
@@ -356,6 +385,7 @@ ul li {
     flex: 1;
     justify-content: space-around;
     background-repeat: no-repeat;
+    background-color: #008ac4;
 }
 
 .landing-column-image {
@@ -384,9 +414,8 @@ ul li {
 .landing-column-text {
     padding: 16px;
     color: #fff;
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto Condensed';
     font-size: 1.2em;
-    background-color: #008ac4;
     text-align: center;
 }
 
@@ -446,7 +475,7 @@ ul li {
 }
 
 .jumbo-text p {
-    font-family: "Roboto Slab";
+    font-family: "Roboto Condensed";
     font-size: 1.2em;
     color: white;
 }
@@ -483,7 +512,7 @@ ul li {
     text-align: center;
 
     /*subtext font text */
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto Condensed';
     color: #888;
 }
 
@@ -581,6 +610,7 @@ ul li {
 .coaching-programs { /* container */
     padding: 0;
     min-height: 80vh;
+    background-color: #333;
 }
 
 .coaching-programs-column {
@@ -588,7 +618,7 @@ ul li {
     margin: 80px;
     flex: 2;
     color: white;
-    font-family: "Roboto Slab";
+    font-family: "Roboto Condensed";
     background-size: cover;
 }
 
@@ -611,7 +641,7 @@ ul li {
 
 /* Nutrition-Only Coaching */
 
-
+/*
 .coaching-programs-column:nth-of-type(2) {
     background-image: url('../static/images/nutrition-coaching-bg.jpg');
 }
@@ -619,6 +649,7 @@ ul li {
 .coaching-programs-column:nth-of-type(3) {
     background-image: url('../static/images/fitness-coaching-bg.jpg');
 }
+*/
 
 /* Nutrition First */
 
@@ -632,8 +663,8 @@ ul li {
     flex-direction: row;
     align-items: center;
     font-size: 1em;
-    font-family: 'Roboto Slab';
-    color: #888;
+    font-family: 'Roboto Condensed';
+    color: #222;
 }
 
 .coaching-nutrition-column:nth-of-type(1) {
@@ -643,7 +674,8 @@ ul li {
 }
 
 .coaching-nutrition-column:nth-of-type(2) {
-    padding: 0 80px;
+    padding-left: 80px;
+    margin-right: 12vh;
     flex: 3;
 }
 
@@ -657,28 +689,69 @@ ul li {
 
 /* About Me */
 .about-contents {
-    margin-top: 80px;
+    margin: 80px 0;
+    font-family: 'Roboto Condensed';
+    color: #222;
+    align-items: center;
+}
+
+.about-contents-column:nth-of-type(1) {
+    flex: 2;
+    background-image: url('../static/images/story-bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+    margin: 24px;
+    margin-left: 25vh;
+}
+
+.about-contents-column:nth-of-type(2) {
+    flex: 3;
+    margin-right: 12vh;
+    padding-left: 80px;
+    border-left: 1px solid #888;
+}
+
+@media only screen and (max-width: 1000px) {
+    .about-contents {
+        flex-direction: column-reverse;
+    }
+
+    .about-contents-column:nth-of-type(1) { 
+        flex: 3;
+        width: 100%;
+        min-height: 98vw;
+        margin: 80px 0;;
+    }
+
+    .about-contents-column:nth-of-type(2) {
+        text-align: center;
+        padding: 0;
+        margin: 0 6vh;
+    }
 }
 
 /* Contact */
 
 .contact-bg {
-    flex: 1;
-    min-height: 120vh;
+    flex: 3;
     background-image: url('../static/images/contact-bg.jpg');
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;  
 }
 
 .contact-form {
-    flex: 2;
-    margin-top: 120px;
-    margin-right: 12vw;
+    flex: 4;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.contact-right-space {
+    flex: 3;
 }
 
 form {
     margin-top: 60px;
-    width: 66%;
 }
 
 label {
@@ -690,6 +763,15 @@ label {
 input {
     margin-bottom: 18px;
     height: 36px;
+    background-color: #222;
+    border: 1px solid #888;
+    color: white;
+}
+
+textarea {
+    background-color: #222;
+    border: 1px solid #888;
+    color: white;
 }
 
 .width-50pct {

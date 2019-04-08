@@ -13,8 +13,9 @@
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Assistant:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/vkm3tit.css">
 
     <title>JSONG Fitness - James Song Vancouver Personal Training, Trainer, Coaching, Strength, Nutrition, Diet</title>
 </head>
@@ -34,31 +35,32 @@
         <div class="contact-bg"></div>
         <div class="contact-form jumbo-text">
             <div class="contact-form-header">
-                <div><span class="brick-title">GET IN TOUCH</span></div>
+                <div class="massive-title">LET'S GET YOU FIT.</div>
             
-                <p>If you have any questions about the services that I offer, send me a message below.</p>
-                <p>Alternatively, message me on my Instagram: @jsong_fitness</p>
-        
+                <p>If you have any questions about the services that I offer, send me a message below. Alternatively, message me on my Instagram: @jsong_fitness</p>
             </div>
-            <form>
+            <form action="https://formspree.io/henryliang@alumni.ubc.ca" method="POST">
                 <label for="first-name" class="width-50pct">First Name</label>
                 <label for="last-name" class="width-50pct">Last Name</label>
-                <input type="text" name="first-name" class="width-50pct">                
+                <input type="text" name="first-name" class="width-50pct" required>                
                 <input type="text" name="last-name" class="width-50pct">  <br />
                 
                 
-                <label for="email">Email Address</label>
-                <input type="text" name="email" class="width-100pct"> <br />
+                <label for="_replyto">Email Address</label>
+                <input type="email" name="_replyto" class="width-100pct" required> <br />
                 
-                <label for="email">Subject</label>
+                <label for="subject">Subject</label>
                 <input type="text" name="subject" class="width-100pct"> <br />
                 
-                <label for="email">Message</label>
-                <textarea name="message" class="width-100pct height-160px"></textarea>
+                <label for="message">Message</label>
+                <textarea name="message" class="width-100pct height-160px" required></textarea>
+
+                <button type="submit" class="white-button" value="Send">Submit</button>
 
             </form>
         
         </div>
+        <div class="contact-right-space"></div>
 
     </div>
 
