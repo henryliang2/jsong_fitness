@@ -499,67 +499,19 @@ ul li {
 
 /* Coaching Approach */
 
-.coaching-approach {
-    background-color: #008ac4;
-    padding: 0;
+.jumbotron-coaching {
+    min-height: 50vh;
+    background-image: url('../static/images/jumbo_coaching.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 4px solid #008ac4;
 }
 
-.coaching-approach-column {
+.jumbotron-coaching-text {
     flex: 1;
-    padding: 26px 16px 26px 16px;
-    border-top: 6px solid #008ac4;
-    background-color: #fff;
-    text-align: center;
-
-    /*subtext font text */
-    font-family: 'Roboto Condensed';
-    color: #888;
-}
-
-.coaching-approach-column h2 {
-    font-size: 1.6em;
-    font-family: 'Assistant';
-    color: #008ac4;
-}
-
-.coaching-approach-column:nth-of-type(1) {
-    background-color: #008ac4;
-    color: #fff;
-    text-align: center;
     align-self: center;
-    height: 100%;
-}
-
-.coaching-approach-column > .brick-title {
-    line-height: 1em; 
-}
-
-/* Text "My 3 step approach */
-.coaching-approach-column > .brick-title > p:nth-of-type(2) {
-    font-size: 4em;
-    line-height: 1em; 
-    font-weight: bold;
-    margin-bottom: 0;
-    padding-bottom: 0;
-
-    position: relative;
-    top: -0.1em;
-}
-
-.coaching-approach-column > img {
-    width: 40%;
-    max-width: 200px;
-    margin-bottom: 12px;
-} 
-
-@media only screen and (max-width: 1000px) {
-    .coaching-approach-column > img {
-        width: 30%;
-        float: left;
-        margin-right: 20px;
-        padding-top: 30px;
-        padding-bottom: 40px;
-    }
+    text-align: center;
 }
 
 
@@ -567,7 +519,7 @@ ul li {
 
 .coaching-skype {
     margin: 0 auto;
-    min-height: 80vh;
+    min-height: 50vh;
     align-items: center;
     justify-content: center;
     display: flex;
@@ -577,17 +529,18 @@ ul li {
     padding: 16px;
     text-align: center;
     flex: 1;
+    font-size: 2.5em;
+    font-family: 'bebas-neue';
+    color: #222;
+}
+
+.coaching-skype-column:nth-of-type(2) {
+    border-left: 1px solid #888;
 }
 
 .coaching-skype-column > img {
     width: 75%;
     margin-bottom: 24px;
-}
-
-.coaching-skype-column > p {
-    font-size: 2em;
-    font-family: 'Assistant';
-    color: #008ac4;
 }
 
 @media only screen and (max-width: 1000px){
@@ -607,49 +560,98 @@ ul li {
 
 /* Coaching Programs */
 
+.coaching-programs-header {
+    font-family: 'bebas-neue';
+    font-size: 5em;
+    color: #888;
+    text-align: center;
+}
+
 .coaching-programs { /* container */
-    padding: 0;
-    min-height: 80vh;
-    background-color: #333;
+    min-height: 50vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.coaching-programs-icon-left {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../static/images/nutrition-coaching-icon.png');
+}
+
+.coaching-programs-icon-right {
+    flex: 1;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../static/images/total-coaching-icon.png');
 }
 
 .coaching-programs-column {
-    padding: 26px 12px 26px 12px;
-    margin: 80px;
-    flex: 2;
-    color: white;
-    font-family: "Roboto Condensed";
-    background-size: cover;
+    flex: 7;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.coaching-programs-title {
+    font-family: 'bebas-neue';
+    color: #444;
+    font-size: 2.5em;
 }
 
 .coaching-programs-column ul {
     list-style-type: square;
+    padding-left: 16px;
 }
 
 .coaching-programs-column ul li {
     margin-bottom: 6px;
 }
 
-/* Text: "2 programs to choose from" */
-.coaching-programs-column > .brick-title > p:nth-of-type(1) {
-    font-size: 4em;
-    font-weight: bold;
-    line-height: 1em; 
-    margin-bottom: 0;
-    padding-bottom: 0;
+/* Coaching Approach */
+
+.coaching-approach {
+    min-height: 50vh;
+    background-image: url('../static/images/approach-bg.jpg');
+    justify-content: space-around;
+    border-top: 4px solid #008ac4;
 }
 
-/* Nutrition-Only Coaching */
-
-/*
-.coaching-programs-column:nth-of-type(2) {
-    background-image: url('../static/images/nutrition-coaching-bg.jpg');
+.coaching-approach > .container {
+    min-height: inherit; /* Needed to ensure vertical alignment */
 }
 
-.coaching-programs-column:nth-of-type(3) {
-    background-image: url('../static/images/fitness-coaching-bg.jpg');
+.coaching-approach-column {
+    flex: 1;
+    text-align: center;
+    align-self: center;
+    margin: 16px;
 }
-*/
+
+.coaching-approach-column > img {
+    max-width: 40%;
+    margin-bottom: 24px;
+}
+
+.coaching-approach-column > h2 {
+    font-family: 'bebas-neue';
+    font-size: 2.5em;
+    color: white;
+}
+
+.coaching-approach-column > p {
+    color: white;
+}
+
+@media only screen and (max-width: 1000px) {
+    .coaching-approach-column > img {
+        width: 30%;
+        float: left;
+        margin-right: 20px;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+}
 
 /* Nutrition First */
 
@@ -669,14 +671,20 @@ ul li {
 
 .coaching-nutrition-column:nth-of-type(1) {
     flex: 2;
-    background-image: url('../static/images/jumbo_nutrition.jpg');
-    background-size: cover;
+    background-image: url('../static/images/nutrition-coaching-bg.jpg');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 60px;
+    min-height: 90vh;
 }
 
 .coaching-nutrition-column:nth-of-type(2) {
-    padding-left: 80px;
-    margin-right: 12vh;
     flex: 3;
+    margin-right: 12vh;
+    margin-left: 60px;
+    padding-left: 60px;
+    border-left: 1px solid #888;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -698,17 +706,18 @@ ul li {
 .about-contents-column:nth-of-type(1) {
     flex: 2;
     background-image: url('../static/images/story-bg.jpg');
+    background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-left: 60px;
     min-height: 90vh;
-    margin: 24px;
-    margin-left: 25vh;
 }
 
 .about-contents-column:nth-of-type(2) {
     flex: 3;
     margin-right: 12vh;
-    padding-left: 80px;
+    margin-left: 60px;
+    padding-left: 60px;
     border-left: 1px solid #888;
 }
 
