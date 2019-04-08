@@ -40,7 +40,7 @@ a, a:visited {
 }
 
 .white-button {
-    margin: 16px auto;
+    margin: 32px auto;
     width: 160px;
     height:36px;
     line-height: 36px;
@@ -51,15 +51,30 @@ a, a:visited {
     color: #008ac4;
     font-family: 'Assistant';
     font-size: 0.8em;
-}
-
-.white-button {
     border: none;
 }
 
-.white-button:hover {
-    background-color: #ddd;
+    .white-button:hover {
+        background-color: #ddd;
+    }
+
+.blue-button {
+    margin: 32px auto;
+    width: 160px;
+    height:36px;
+    line-height: 36px;
+    background-color: #008ac4;
+    padding: 0 12px 0 12px;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    font-family: 'Assistant';
+    font-size: 0.8em;
 }
+
+    .blue-button:hover {
+        background-color:#888;
+    }
 
 .container-fluid {
     padding: 0;
@@ -506,12 +521,18 @@ ul li {
     background-position: center;
     background-repeat: no-repeat;
     border-bottom: 4px solid #008ac4;
+    align-items: center;
+    text-align: center;
 }
 
-.jumbotron-coaching-text {
-    flex: 1;
-    align-self: center;
-    text-align: center;
+.jumbotron-coaching > .massive-title {
+    margin: 0 24px;
+}
+
+@media only screen and (max-width: 1000px){ 
+    .jumbotron-coaching {
+        min-height: 80vh;
+    }
 }
 
 
@@ -546,10 +567,10 @@ ul li {
 @media only screen and (max-width: 1000px){
 
     .coaching-skype {
-        flex-direction: column-reverse;
+        flex-direction: column;
         min-height: 0;
-        margin-top: 160px;
-        margin-bottom: 160px;
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
     
     .coaching-skype-column > img {
@@ -587,6 +608,12 @@ ul li {
     background-image: url('../static/images/total-coaching-icon.png');
 }
 
+@media only screen and (max-width: 1000px) {
+    .coaching-approach-icon-left, .coaching-approach-icon-right {
+        display: none;
+    }
+}
+
 .coaching-programs-column {
     flex: 7;
     padding-left: 24px;
@@ -607,14 +634,25 @@ ul li {
 .coaching-programs-column ul li {
     margin-bottom: 6px;
 }
+.coaching-programs-content {
+    padding-bottom: 60px;
+}
 
 /* Coaching Approach */
 
 .coaching-approach {
     min-height: 50vh;
     background-image: url('../static/images/approach-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
     justify-content: space-around;
     border-top: 4px solid #008ac4;
+}
+
+@media only screen and (max-width: 1000px) {
+    .coaching-approach {
+        padding-top: 60px;
+    }
 }
 
 .coaching-approach > .container {
@@ -692,6 +730,11 @@ ul li {
         text-align: center;
         flex-direction: column-reverse;
     }
+
+    .coaching-nutrition-column:nth-of-type(1) {
+        display: none;
+    }
+
 }
 
 
