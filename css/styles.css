@@ -459,6 +459,8 @@ ul li {
     font-family: 'Roboto Condensed';
     font-size: 1.2em;
     color: black;
+    padding-left: 60px;
+    border-left: 1px solid #888;
 }
 
 /* Jumbotron Settings */
