@@ -40,14 +40,13 @@ a, a:visited {
 }
 
 .white-button {
-    margin: 32px auto;
+    margin: 24 0px;
     width: 160px;
     height:36px;
     line-height: 36px;
     background-color: #fff;
     padding: 0 12px 0 12px;
     text-align: center;
-    vertical-align: middle;
     color: #008ac4;
     font-family: 'Assistant';
     font-size: 0.8em;
@@ -59,14 +58,13 @@ a, a:visited {
     }
 
 .blue-button {
-    margin: 32px auto;
+    margin: 24px 0;
     width: 160px;
     height:36px;
     line-height: 36px;
     background-color: #008ac4;
     padding: 0 12px 0 12px;
     text-align: center;
-    vertical-align: middle;
     color: #fff;
     font-family: 'Assistant';
     font-size: 0.8em;
@@ -325,11 +323,9 @@ ul li {
 #landing-ebook-container {
     position: absolute;
     z-index: 5;
-    
     width: 380px;
     padding: 12px 12px 12px 0;
-    background-color: #008ac4;
-
+    background-color: white;
     bottom: 25vh;
     right: 25vh;
 }
@@ -348,12 +344,12 @@ ul li {
         display: flex;
         margin-left: 132px;
         text-align: center;
-        font-family: 'Assistant';
+        font-family: 'Roboto Condensed';
         font-size: 1.2em;
-        color: white;
+        color: black;
     }
 
-    #landing-ebook-container > .white-button {
+    #landing-ebook-container > .blue-button {
         position: absolute;
         bottom: -64px;
         right: 52px;
@@ -387,26 +383,35 @@ ul li {
     z-index: 4;
 }
 
-.landing-sub-title {
-    font-family: 'Assistant';
-    font-size: 2em;
+.landing-column-title {
+    width: 100%;
+    font-family: 'bebas-neue';
+    font-size: 5em;
+    color: #888;
     text-align: center;
-    vertical-align: middle;
-    height: 80px;
+    margin-bottom: 60px;
 }
 
 .landing-column {
     margin: 12px;
     flex: 1;
     justify-content: space-around;
-    background-repeat: no-repeat;
-    background-color: #008ac4;
+        -webkit-box-shadow: 4px 4px 6px 2px rgba(136,136,136,1);
+        -moz-box-shadow: 4px 4px 6px 2px rgba(136,136,136,1);
+    box-shadow: 4px 4px 6px 2px rgba(136,136,136,1);
+}
+
+.landing-column .blue-button {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .landing-column-image {
     min-height: 240px;
     background-size: cover;
+    background-repeat: no-repeat;
     border-top: 6px solid #008ac4;
+    font-size: 0.5em; /* to modulate the size of the Massive Title within */
     
     /* position title in middle of jumbo */
     display: flex;
@@ -424,17 +429,39 @@ ul li {
 
 .landing-column:nth-of-type(3) > .landing-column-image {
     background-image: url('../static/images/jumbo_guarantee.jpg');
+    background-position: center;
 }
 
 .landing-column-text {
     padding: 16px;
-    color: #fff;
+    color: black;
     font-family: 'Roboto Condensed';
     font-size: 1.2em;
     text-align: center;
 }
 
-/* Coaching Page */
+.home-ebook {
+    margin-top: 80px;
+    min-height: 360px;
+}
+
+.home-ebook-image {
+    flex: 1;
+    text-align: center;
+}
+
+.home-ebook-image > img {
+    width: 200px
+}
+
+.home-ebook-text {
+    flex: 2;
+    font-family: 'Roboto Condensed';
+    font-size: 1.2em;
+    color: black;
+}
+
+/* Jumbotron Settings */
 
 .jumbo-container {
     display: flex;
@@ -594,23 +621,25 @@ ul li {
     padding-bottom: 60px;
 }
 
-.coaching-programs-icon-left {
+.coaching-programs-icon-left, .coaching-programs-icon-right {
     flex: 1;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.coaching-programs-icon-left {
     background-image: url('../static/images/nutrition-coaching-icon.png');
 }
 
 .coaching-programs-icon-right {
-    flex: 1;
-    background-repeat: no-repeat;
-    background-size: contain;
     background-image: url('../static/images/total-coaching-icon.png');
 }
 
 @media only screen and (max-width: 1000px) {
-    .coaching-approach-icon-left, .coaching-approach-icon-right {
-        display: none;
+    .coaching-programs-icon-left, .coaching-programs-icon-right {
+        background-position: center;
+        min-height: 120px;
+        margin-bottom: 36px;
     }
 }
 
@@ -635,6 +664,9 @@ ul li {
     margin-bottom: 6px;
 }
 .coaching-programs-content {
+    font-family: 'Roboto Condensed';
+    font-size: 1.1em;
+    color: black;
     padding-bottom: 60px;
 }
 
@@ -649,14 +681,23 @@ ul li {
     border-top: 4px solid #008ac4;
 }
 
+.coaching-approach-header {
+    font-size: 5em;
+    font-family: 'bebas-neue';
+    color: #fff;
+    text-align: center;
+    line-height: 1em;
+    margin-top: 32px;
+}
+
 @media only screen and (max-width: 1000px) {
-    .coaching-approach {
-        padding-top: 60px;
+    .coaching-approach-header {
+        margin-bottom: 32px;
     }
 }
 
 .coaching-approach > .container {
-    min-height: inherit; /* Needed to ensure vertical alignment */
+    min-height: inherit; /* Needed to ensure horizontal alignment */
 }
 
 .coaching-approach-column {
@@ -664,6 +705,7 @@ ul li {
     text-align: center;
     align-self: center;
     margin: 16px;
+    color: white;
 }
 
 .coaching-approach-column > img {
@@ -674,11 +716,11 @@ ul li {
 .coaching-approach-column > h2 {
     font-family: 'bebas-neue';
     font-size: 2.5em;
-    color: white;
 }
 
 .coaching-approach-column > p {
-    color: white;
+    font-family: 'Roboto Condensed';
+    font-size: 1.2em;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -695,16 +737,13 @@ ul li {
 
 .coaching-nutrition {
     margin: 120px 0;
+    align-items: center;
 }
 
-.coaching-nutrition-column {
-    min-height: 80vh;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 1em;
+.coaching-nutrition-column > p {
     font-family: 'Roboto Condensed';
     color: #222;
+    font-size: 1.2em;
 }
 
 .coaching-nutrition-column:nth-of-type(1) {
@@ -719,6 +758,7 @@ ul li {
 
 .coaching-nutrition-column:nth-of-type(2) {
     flex: 3;
+    flex-direction: column;
     margin-right: 12vh;
     margin-left: 60px;
     padding-left: 60px;
@@ -741,8 +781,6 @@ ul li {
 /* About Me */
 .about-contents {
     margin: 80px 0;
-    font-family: 'Roboto Condensed';
-    color: #222;
     align-items: center;
 }
 
@@ -762,6 +800,12 @@ ul li {
     margin-left: 60px;
     padding-left: 60px;
     border-left: 1px solid #888;
+}
+
+.about-contents-column > p {
+    font-family: 'Roboto Condensed';
+    font-size: 1.2em;
+    color: black;
 }
 
 @media only screen and (max-width: 1000px) {
