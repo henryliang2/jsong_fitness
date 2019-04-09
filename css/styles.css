@@ -419,6 +419,18 @@ ul li {
     align-items: center;
 }
 
+@media only screen and (max-width: 400px) {
+    .landing-column-title {
+        font-size: 4em;
+    }
+
+    .landing-column-container {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+
 .landing-column:nth-of-type(1) > .landing-column-image {
     background-image: url('../static/images/jumbo_mission.jpg');
 }
@@ -504,6 +516,12 @@ ul li {
     }
 }
 
+@media only screen and (max-width: 400px){
+    .massive-title {
+        font-size: 4em;
+    }
+}
+
 .jumbo-text-container {
     display: flex;
     align-items: center;
@@ -541,7 +559,7 @@ ul li {
 
 }
 
-/* Coaching Approach */
+/* Coaching Main Jumbotron */
 
 .jumbotron-coaching {
     min-height: 50vh;
@@ -558,11 +576,18 @@ ul li {
     margin: 0 24px;
 }
 
-@media only screen and (max-width: 1000px){ 
+@media only screen and (max-width: 400px){ 
+
     .jumbotron-coaching {
         min-height: 80vh;
     }
+
+    .jumbotron-coaching > .massive-title {
+        font-size: 4em;
+    }
 }
+
+
 
 
 /* Coaching Skype */
@@ -615,6 +640,12 @@ ul li {
     font-size: 5em;
     color: #888;
     text-align: center;
+}
+
+@media only screen and (max-width: 400px){
+    .coaching-programs-header {
+        font-size: 4em;
+    }
 }
 
 .coaching-programs { /* container */
@@ -684,9 +715,6 @@ ul li {
 }
 
 .coaching-approach-header {
-    font-size: 5em;
-    font-family: 'bebas-neue';
-    color: #fff;
     text-align: center;
     line-height: 1em;
     margin-top: 32px;
@@ -710,7 +738,7 @@ ul li {
     color: white;
 }
 
-.coaching-approach-column > img {
+.coaching-approach-column > div > img {
     max-width: 40%;
     margin-bottom: 24px;
 }
@@ -775,6 +803,10 @@ ul li {
 
     .coaching-nutrition-column:nth-of-type(1) {
         display: none;
+    }
+
+    .massive-title-light {
+        font-size: 4em;
     }
 
 }
