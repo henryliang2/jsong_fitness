@@ -146,6 +146,16 @@ ul li {
     color: #888;
     font-family: 'Assistant';
     font-size: 1em;
+    line-height: 1.8em;
+}
+
+.container-footer > .container > .column {
+    flex: 1;
+}
+
+
+.container-footer > .container > .column:nth-of-type(2) {
+    flex: 3;
 }
 
 .container-footer ul li {
@@ -173,30 +183,28 @@ ul li {
     justify-content: space-between;
 }
 
-.container-footer > .container > .column span {
-    margin-right: 24px;
-}
-
-.container-footer > .container > .column:nth-of-type(1) {
+.container-footer > .container > .column:nth-of-type(3) {
     background-image: url(../static/images/logo-header.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-.container-footer > .container > .column:nth-of-type(4) {
-    /* align-self: flex-end; */
-}
-
 .gray-box {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     background-color: #222;
     margin: 0;
+    margin-right: 12px;
 }
 
     .gray-box-ig {
         background-image: url('../static/images/glyphs/ig.gif');
+    }
+
+    .gray-box img {
+        width: 40px;
+        height: 40px;
     }
 
 /* Content */
@@ -382,6 +390,7 @@ ul li {
     bottom: 4vh;
     z-index: 4;
 }
+
 
 .landing-column-title {
     width: 100%;
@@ -1006,6 +1015,13 @@ textarea {
 
 .height-160px {
     height: 160px;
+}
+
+@media only screen and (max-width: 1285px) {
+    .contact-bg {
+        background-size: cover;
+        background-position: right;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
