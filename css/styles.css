@@ -428,7 +428,7 @@ ul li {
     align-items: center;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 513px) {
     .landing-column-title {
         font-size: 4em;
     }
@@ -525,7 +525,7 @@ ul li {
     }
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 513px){
     .massive-title {
         font-size: 4em;
     }
@@ -585,10 +585,10 @@ ul li {
     margin: 0 24px;
 }
 
-@media only screen and (max-width: 400px){ 
+@media only screen and (max-width: 513px){ 
 
     .jumbotron-coaching {
-        min-height: 80vh;
+        min-height: 50vh;
     }
 
     .jumbotron-coaching > .massive-title {
@@ -651,7 +651,7 @@ ul li {
     text-align: center;
 }
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 513px){
     .coaching-programs-header {
         font-size: 4em;
     }
